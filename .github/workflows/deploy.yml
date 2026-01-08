@@ -25,7 +25,6 @@ jobs:
             git pull origin main
             source venv/bin/activate
             pip install -r .requirements.txt
-            yarn run build
             # Restart or start the app using PM2
             pm2 restart flask-app || pm2 start /home/ubuntu/simple-python-project/start.sh --name "flask-app"
             pm2 save
