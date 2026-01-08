@@ -21,7 +21,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             set -e
-            cd /home/ubuntu/ simple-python-project
+            cd /home/ubuntu/simple-python-project
             git pull origin main
             pip install -r .requirement.txt
             yarn run build
