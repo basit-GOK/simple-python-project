@@ -23,7 +23,8 @@ jobs:
             set -e
             cd /home/ubuntu/simple-python-project
             git pull origin main
-            pip install -r .requirement.txt
+            source venv/bin/activate
+            pip install -r .requirements.txt
             yarn run build
             # Restart or start the app using PM2
             pm2 restart flask-app || pm2 start /home/ubuntu/simple-python-project/start.sh --name "flask-app"
